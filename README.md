@@ -50,6 +50,9 @@ You can interact with the API using tools like [Insomnia](https://insomnia.rest/
 
 Please watch the [walkthrough video]((https://youtu.be/uueR1XOmpcg)) to see a demonstration of the API's functionality.
 
+https://youtu.be/uueR1XOmpcg
+
+
 ## Contributing
 
 Contributions are welcome! If you have any ideas or improvements to suggest, please open an issue or submit a pull request.
