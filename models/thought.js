@@ -29,7 +29,6 @@ const reactionSchema = new Schema(
   }
 );
 
-// `thoughtText`,`createdAt`,`username`,`reactions`
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -56,8 +55,6 @@ const thoughtSchema = new Schema(
     id: false,
   }
 );
-
-//   Create a virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
 
 thoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;

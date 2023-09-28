@@ -8,7 +8,6 @@ const thoughtController = {
       .then((thought) => res.json(thought))
       .catch((err) => res.status(500).json(err));
   },
-  // get one thought by it's id
   // create thought to a user
   createThought(req, res) {
     Thought.create(req.body)
@@ -104,10 +103,8 @@ const thoughtController = {
       { _id: req.params.thoughtId },
       { $pull: { reactions: { reactionId: req.params.reactionId } } },
       { runValidators: true, new: true }
-      // { new: true }
     )
       .then((thought) =>
-        // console.log("get the deleteReaction")
         !thought
           ? res
               .status(404)
@@ -116,14 +113,6 @@ const thoughtController = {
       )
       .catch((err) => res.status(500).json(err));
   },
-
-  // getAllThoughts,
-  //   getThoughtById,
-  //   createThought,
-  //   updateThought,
-  //   deleteThought,
-  //   addReaction,
-  //   deleteReaction,
 };
 
 module.exports = thoughtController;
